@@ -1,18 +1,19 @@
 body {
     font-family:Helvetica, Arial, sans-serif;
+    margin: 0;
 }
 
 main {
     overflow: hidden;
     background-color: #f0f2f5;
-    min-height: 712px;
+    min-height: 720px;
 }
 
 #fb-left {
     float:left;
     position: relative;
-    left: 434px;
-    top: 203px
+    left: 442px;
+    top: 211px
 }
 #fb-left img {
     height: 106px;
@@ -29,8 +30,8 @@ main {
 #fb-right {
     float:right;
     position: relative;
-    top: 123.5px;
-    right: 453px;
+    top: 132px;
+    right: 461px;
     width: 396px;
 }
 
@@ -49,7 +50,7 @@ input {
     height: 48px;
     border: 1.5px solid rgb(227, 227, 227);
     border-radius: 6px;
-    padding-left: 16.5px;
+    padding-left: 16px;
 }
 
 #email {
@@ -70,8 +71,8 @@ input {
 
 #login {
     width: 364px;
-    margin-left: 0.5px;
-    padding-top: 3px;
+    margin-left: 0.35px;
+    padding-top: 1px;
     font-size: 20px;
     background-color: #1877f2;
     margin-top: 16px;
@@ -105,7 +106,7 @@ hr {
 #hint {
     font-size: 14px;
     text-align: center;
-    margin-top: 29.5px;
+    margin-top: 29px;
 }
 
 #create-page {
@@ -117,7 +118,7 @@ hr {
 footer {
     position: relative;
     top: 15px;
-    left: 394px;
+    left: 402px;
     max-width: 1050px;
     font-size: 12px;
 }
