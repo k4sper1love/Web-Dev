@@ -1,0 +1,164 @@
+body {
+    font-family:Helvetica, Arial, sans-serif;
+}
+
+main {
+    overflow: hidden;
+    background-color: #f0f2f5;
+    min-height: 712px;
+}
+
+#fb-left {
+    float:left;
+    position: relative;
+    left: 434px;
+    top: 203px
+}
+#fb-left img {
+    height: 106px;
+    margin: -35px;
+    padding-left: 7px;
+}
+
+#fb-left h2 {
+    font-weight: normal;
+    font-size: 28px;
+    max-width: 500px;
+}
+
+#fb-right {
+    float:right;
+    position: relative;
+    top: 123.5px;
+    right: 453px;
+    width: 396px;
+}
+
+form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    text-align: center;
+    height: 350px;
+}
+
+input {
+    font-size: 17px;
+    width: 344px;
+    color: black;
+    height: 48px;
+    border: 1.5px solid rgb(227, 227, 227);
+    border-radius: 6px;
+    padding-left: 16.5px;
+}
+
+#email {
+    margin-top: 16px;
+}
+
+#password {
+    margin-top: 12px;
+}
+
+.btn-form {
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    height: 48px;
+}
+
+#login {
+    width: 364px;
+    margin-left: 0.5px;
+    padding-top: 3px;
+    font-size: 20px;
+    background-color: #1877f2;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#reg {
+    width: 192px;
+    font-size: 17px;
+    background-color: #42b72a;
+    margin-top: 18px;
+}
+
+#forgot-pass {
+    text-decoration: none;
+    color: #1877f2;
+    font-size: 14px;
+    
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgb(227, 227, 227);
+}
+
+#form-line {
+    width: 365px;
+    margin-top: 21px;
+}
+
+#hint {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 29.5px;
+}
+
+#create-page {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+footer {
+    position: relative;
+    top: 15px;
+    left: 394px;
+    max-width: 1050px;
+    font-size: 12px;
+}
+
+ul li{
+    display: inline-block;
+    padding-right: 6.65px;
+    color: rgb(143, 143, 143);
+}
+
+#btn-plus {
+    background-color: rgb(248, 248, 248);
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 2px;
+    width: 30px;
+    height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(95, 95, 95);
+    position: relative;
+    top: 1px;
+}
+
+#footer-line {
+    margin-top: -3.5px;
+    margin-left: 40px;
+    width: 980px;
+}
+
+#more-func li{
+    position: relative;
+    bottom: 2px;
+    padding-right: 16.7px;
+    padding-bottom: 4px;
+    line-height: 15px;
+}
+
+#copyriting {
+    font-size:11px;
+    color: #737373;
+    position: relative;
+    left:40px;
+    top:6px
+}
