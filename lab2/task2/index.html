@@ -15,29 +15,35 @@
             </div>
             <div id="ig-right">
                 <div id="login-area" class="form-area">
-                    <img id="ig-logo">
+                    <img id="ig-logo" src="img/ig.png" alt="Instagram logo">
                     <form id="main-form">
-                        <input type="email" name="email" id="email">
-                        <input type="password" name="password" id="password">
+                        <input type="email" name="email" id="email" placeholder="Телефон, имя пользователя или эл. адрес"><br>
+                        <input type="password" name="password" id="password" placeholder="Пароль"><br>
                         <button id="btn-login">Войти</button>
                     </form>
-                    <hr>
-                    <span id="or">Или</span>
-                    <hr>
-                    <div id="login-with-fb">
-                        <img id="fb-logo">
-                        <a id="fb-login-link">Войти через Facebook</a>
+                    <div id="form-separator">
+                        <hr id="first-hr">
+                        <span id="or">или</span>
+                        <hr id="second-hr">
                     </div>
-                    <a id="forgot-pass">Забыли пароль?</a>
+                    <div id="login-with-fb">
+                        <a href="https://www.facebook.com/login.php">
+                            <img id="fb-logo" alt="Facebook logo" src="img/fb.png">
+                            <span id="fb-login-text">Войти через Facebook</span>
+                        </a>
+                    </div>
+                    <a id="forgot-pass" href="https://www.instagram.com/accounts/password/reset/">Забыли пароль?</a>
                 </div>
                 <div id="reg-area" class="form-area">
-                    <span id="reg-text">У вас еще нет аккаунта?</span>
-                    <a id="reg-link">Зарегистрироваться</a>
+                    <span id="reg-text">У вас ещё нет аккаунта?</span>
+                    <a id="reg-link" href="https://www.instagram.com/accounts/emailsignup/">Зарегистрироваться</a>
                 </div>
                 <div id="hint">
-                    <span id="apps">Установите приложение.</span>
-                    <img id="google-play-icon">
-                    <img id="microsoft-icon">
+                    <div id="apps">Установите приложение.</div>
+                    <div id="download-icons">
+                        <a class="download-ref" href="https://play.google.com/store/apps/details?id=com.instagram.android"><img id="google-play-icon" src="img/google-play.png" alt="google play download"></a>
+                        <a class="download-ref" href="https://www.youtube.com/watch?v=u4ZtCuxMls0"><img id="microsoft-icon" src="img/microsoft.png" alt="microsoft download"></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -45,22 +51,22 @@
     <footer>
         <ul>
             <li>
-                <a class="list-ref">Meta</a>
+                <a class="list-ref another-page">Meta</a>
             </li>
             <li>
-                <a class="list-ref">Информация</a>
+                <a class="list-ref another-page">Информация</a>
             </li>
             <li>
-                <a class="list-ref">Блог</a>
+                <a class="list-ref another-page">Блог</a>
             </li>
             <li>
                 <a class="list-ref">Вакансии</a>
             </li>
             <li>
-                <a class="list-ref">Помощь</a>
+                <a class="list-ref another-page">Помощь</a>
             </li>
             <li>
-                <a class="list-ref">API</a>
+                <a class="list-ref another-page">API</a>
             </li>
             <li>
                 <a class="list-ref">Конфиденциальность</a>
@@ -75,20 +81,28 @@
                 <a class="list-ref">Instagram Lite</a>
             </li>
             <li>
-                <a class="list-ref">Threads</a>
+                <a class="list-ref another-page">Threads</a>
             </li>
             <li>
                 <a class="list-ref">Загрузка контактов и лица, не являющиеся пользователями</a>
             </li>
             <li>
-                <a class="list-ref">Meta Verified</a>
+                <a id="meta-verified" class="list-ref another-page">Meta Verified</a>
             </li>
         </ul>
         <br>
         <div id="ftr-other">
-            <span id="languages">Русский</span>
-            <span id="copyriting">2024 Instagram from Meta</span>
+            <span id="languages" class="list-ref">Русский ˇ</span>
+            <span id="copyriting">© 2024 Instagram from Meta</span>
         </div>
     </footer>
+    <script>
+        var ref = document.getElementsByClassName("list-ref")
+        for(var i = 0; i < ref.length; i++){
+            ref[i].addEventListener("click", function(){
+            window.open("https://www.youtube.com/watch?v=u4ZtCuxMls0")
+        })
+        }
+    </script>
 </body>
 </html>
