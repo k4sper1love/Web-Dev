@@ -53,6 +53,16 @@ input {
     padding-left: 16px;
 }
 
+input:focus{
+    outline: none;
+    border-color: #1b74e4;
+}
+input:focus::placeholder{
+    color:#c7c7c7
+}
+input::placeholder{
+    color:#999999
+}
 #email {
     margin-top: 16px;
 }
@@ -79,6 +89,10 @@ input {
     margin-bottom: 16px;
 }
 
+#login:hover{
+    cursor: pointer;
+}
+
 #reg {
     width: 192px;
     font-size: 17px;
@@ -86,11 +100,19 @@ input {
     margin-top: 18px;
 }
 
+#reg:hover{
+    background-color: #36a420;
+    cursor: pointer;
+}
+
 #forgot-pass {
     text-decoration: none;
     color: #1877f2;
     font-size: 14px;
-    
+}
+
+#forgot-pass:hover{
+    text-decoration: underline;
 }
 
 hr {
@@ -115,6 +137,10 @@ hr {
     color: black;
 }
 
+#create-page:hover{
+    text-decoration: underline;
+}
+
 footer {
     position: relative;
     top: 15px;
@@ -123,10 +149,18 @@ footer {
     font-size: 12px;
 }
 
+ul {
+    cursor: default;
+}
+
 ul li{
     display: inline-block;
     padding-right: 6.65px;
     color: rgb(143, 143, 143);
+}
+li a:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #btn-plus {
@@ -140,6 +174,15 @@ ul li{
     color: rgb(95, 95, 95);
     position: relative;
     top: 1px;
+}
+
+#btn-plus:hover {
+    cursor: pointer;
+    background-color: rgb(240, 240, 240);
+}
+
+#btn-plus:active{
+    background-color: rgb(223, 223, 223);
 }
 
 #footer-line {
