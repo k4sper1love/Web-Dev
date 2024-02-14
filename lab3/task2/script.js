@@ -12,18 +12,15 @@ function createTask() {
     </div>
     `;
     newTask.classList.add('elem');
-    if(container.hasChildNodes){
-        container.insertBefore(newTask, container.firstChild);
-    } else {
-        container.appendChild(newTask);
-    }
+    container.insertBefore(newTask, container.firstChild);
+    container.style.border = '1px solid rgb(212, 212, 212)';
     addDeleteListener(newTask.querySelector('.delete-img'));
     addCheckListener(newTask.querySelector('.checkbox'));
-    clearInput();
 }
 
 function getValue(){
     let value = document.getElementById("text-input").value;
+    clearInput();
     if(value == '') return 'New Task';
     return value;
 }
@@ -47,3 +44,10 @@ function addCheckListener(checkbox){
         }
     })
 }
+
+document.getElementById('text-input').addEventListener('keypress', function(event){
+    if(event.keyCode == 13){
+        event.preventDefault();
+        createTask();
+    }
+})

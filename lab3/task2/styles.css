@@ -37,14 +37,46 @@ main {
     height: 100%;
     border: 1px solid rgb(212, 212, 212);
     border-radius: 4px;
+    padding-left: 1%;
+}
+
+#text-input:hover{
+    background-color: #fafafa;
+    transition: background-color 0.5s ease;
+}
+
+#text-input:focus{
+    outline: none;
+    border-color: #1b74e4;
+}
+
+#text-input:focus::placeholder{
+    color:#c7c7c7
+}
+#text-input::placeholder{
+    color:#999999
 }
 
 #btn-add {
     width: 45px;
     height: 100%;
     margin-left: 2em;
+    border: 1px solid rgb(212, 212, 212);
+    background-color: rgb(62, 133, 226);
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
 }
 
+#btn-add:hover{
+    cursor: pointer;
+    background-color: rgb(34, 112, 214);
+    transition: background-color 0.3s ease;
+}
+
+#list:empty {
+    border: none;
+}
 #list {
     margin-top: 3em;
     width: 45%;
@@ -56,21 +88,33 @@ main {
 .elem {
     width: 100%;
     min-height: 4em;
-    border: 1px solid rgb(212, 212, 212);
+    border-top: 1px solid rgb(212, 212, 212);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+.elem:first-child {
+    border-top: none;
+}
+
+.elem:hover {
+    background-color: ghostwhite;
+    transition: background-color 0.2s ease;
+}
+
 .checkbox {
     margin-left: 20px;
     float: left;
+    height: 1.3em;
+    width: 1.3em;
 } 
 
 .task {
     margin-left: 20px;
     float: right;
     max-width: 90%;
+    word-wrap: break-word;
 }
 
 .delete img{
@@ -79,6 +123,6 @@ main {
 }
 
 .delete img:hover{
-    opacity: 75%;
+    opacity: 70%;
     cursor: pointer;
 }
