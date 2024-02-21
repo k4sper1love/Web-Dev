@@ -25,4 +25,8 @@ export class ProductDetailsComponent implements OnInit {
       this.cartService.addToCart(product);
       window.alert('Your product has been added to the cart!');
     }
+
+    goToKaspi(product: Product){
+      window.location.href = product.link;
+    }
 }

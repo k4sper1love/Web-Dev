@@ -10,10 +10,11 @@ import { products } from '../products';
 export class ProductListComponent {
   products = [...products];
 
-  share() {
-    window.alert('The product has been shared!');
-  }
-
+  share(link: string, name: string) {
+    const message = `Посмотрите ${name}: ${link}`;
+    const tgLink = `https://telegram.me/share/url?url=${message}`;
+    window.location.href = tgLink;
+}
   onNotify(){
     window.alert('You will be notified when the product goes on sale');
   }
