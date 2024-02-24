@@ -1,6 +1,0 @@
-<ul *ngFor="let category of categories">
-    <li>
-      <a [routerLink]="['/category', category.id]"> {{ category.name }}</a>
-    </li>
-  </ul>
-<app-product-list [products]="productsArray"></app-product-list>

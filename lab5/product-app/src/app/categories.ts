@@ -6,11 +6,11 @@ export interface Category {
 export const categories = [
     {
         id: 1,
-        name: "Бытовые вещи",
+        name: "Бытовая техника",
     },
     {
         id: 2,
-        name: "Техника",
+        name: "Компьютеры",
     },
     {
         id: 3,
@@ -18,6 +18,6 @@ export const categories = [
     },
     {
         id: 4,
-        name: "Одежда",
+        name: "Аптека",
     }
 ]
