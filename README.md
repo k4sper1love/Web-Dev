@@ -1,6 +1,6 @@
 # Web-Dev
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Computer+science+student)](https://git.io/typing-svg)
-POST /menus
+```POST /menus
 GET /menus/:id
 PUT /menus/:id
-DELETE /menus/:id
+DELETE /menus/:id```
