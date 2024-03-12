@@ -9,7 +9,7 @@
         <form (ngSubmit)="updateTitle()" #form="ngForm">
             <label for="text">Edit title</label><br>
             <input type="text" id="text" placeholder="text" name="title" [(ngModel)]="newTitle">
-            <button class="save-btn" type="button" (click)="updateTitle()">Save!</button>
+            <button class="save-btn" type="submit">Save!</button>
         </form>
     </div>
     <button class="return-btn" routerLink="/albums">Return back</button>

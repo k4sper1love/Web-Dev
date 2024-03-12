@@ -1,19 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { AlbumsService } from '../albums.service';
-import { Album } from '../album';
 import { CommonModule } from '@angular/common'; 
 import { RouterModule } from '@angular/router';
+import { Album } from '../album'; 
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-albums',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './albums.component.html',
   styleUrl: './albums.component.css'
 })
 
 export class AlbumsComponent {
   albums: Album[] = [];
-
+  showInputs: boolean = false;
+  newUserId: number | undefined;
+  newId: number | undefined;
+  newTitle: string | undefined;
   constructor(private albumsService: AlbumsService) {}
 
   ngOnInit(){
@@ -36,6 +40,29 @@ export class AlbumsComponent {
     }, error => {
         console.error("Ошибка при удалении альбома", error);
     });
-}
+  }
+
+  toggleInputs(){
+    this.showInputs = !this.showInputs;
+  }
+
+  addAlbum() {
+    if(this.newUserId && this.newId && this.newTitle){
+      if(this.albums.find(album => album.id == this.newId)) {
+        window.alert('Объект с таким айди уже есть')
+      } else {
+        const newAlbum: Album = {
+          userId: this.newUserId,
+          id: this.newId,
+          title: this.newTitle
+        }
+        this.albums.push(newAlbum);
+        this.albumsService.addAlbum(newAlbum).subscribe();
+        window.alert('Успешно добавлено')
+      }
+    } else {
+      window.alert("Неправильный формат")
+    }
+  }
 
 }

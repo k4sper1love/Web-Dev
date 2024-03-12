@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Album } from './album';
 import { Photo } from './photo';
-import { Observable } from 'rxjs';
+import { Observable, catchError } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -19,9 +19,9 @@ export class AlbumsService {
     return this.http.get<Album>(url)
   }
 
-  deleteAlbum(id: number): Observable<any> {
+  deleteAlbum(id: number): Observable<Album> {
     const url = `${this.albumsUrl}/${id}`;
-    return this.http.delete<any>(url);
+    return this.http.delete<Album>(url);
   }
 
   updateAlbum(album: Album): Observable<Album>{
@@ -32,5 +32,9 @@ export class AlbumsService {
   getPhotos(albumId: number): Observable<Photo[]>{
     const url = `${this.albumsUrl}/${albumId}/photos`;
     return this.http.get<Photo[]>(url);
+  }
+
+  addAlbum(album: Album): Observable<Album> {
+    return this.http.post<Album>(this.albumsUrl, album);
   }
 }

@@ -17,6 +17,6 @@ export class AboutComponent {
     setTimeout(function(){
       gifContainer.style.display = 'none';
       audio.pause();
-    }, 3000)
+    }, 1000)
     }
 }
