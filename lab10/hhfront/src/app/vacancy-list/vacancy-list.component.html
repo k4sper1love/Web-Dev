@@ -1,0 +1,13 @@
+<!-- HTML для списка вакансий -->
+<div class="vacancies-list">
+    <h2>Vacancies for selected company</h2>
+    <ul class="vacancy-list">
+        <li *ngFor="let vacancy of vacancies" class="vacancy-item">
+            <div class="vacancy-info">
+                <h3 class="vacancy-name">{{ vacancy.name }}</h3>
+                <p class="vacancy-description">Description: {{ vacancy.description }}</p>
+                <p class="vacancy-salary">Salary: {{ vacancy.salary }}</p>
+            </div>
+        </li>
+    </ul>
+</div>
